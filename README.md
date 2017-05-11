@@ -33,11 +33,13 @@ You can ssh to a particular node using `gcloud compute ssh <name>`.
 Execute following steps to complete setup,
 
   + kubemaster-01
+
   ```
   $ ~/setup_k8s_master.sh
   ```
 
   + kubeminion-01
+
   Get token from kubemaster-01,
   ```
   $ sudo kubeadm token list
@@ -57,15 +59,23 @@ Execute following steps to complete setup,
   ```
 
   + omm-01
+
   ```
   $ ~/setup_omm.sh
   ```
 
   + osh-01
+
   ```
   $ ~/setup_osh.sh -i <osh_ip>
   $ ~/setup_osh.sh -i 10.240.0.30
   ```
+
+4. If you want to cleanup all setup(GCE resources) later,
+
+```
+$ ./cleanup.sh
+```
 
 # Verification
 
